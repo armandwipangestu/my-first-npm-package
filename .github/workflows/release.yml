@@ -63,6 +63,7 @@ jobs:
             issues: write
             pull-requests: write
             id-token: write # Mandatory for OIDC and Granular Tokens
+            packages: write # Required to push to GitHub Packages
         environment: ${{ github.ref_name }}
 
         steps:
@@ -80,11 +81,25 @@ jobs:
             - name: Install dependencies
               run: npm ci # This installs everything in devDependencies fast
 
-            - name: Run semantic-release
+            - name: Run semantic-release (Publishes to npmjs.org)
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-                  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+                  NPM_TOKEN: ${{ secrets.NPM_TOKEN }} # For npmjs.org registry
               run: npx semantic-release
+
+            - name: Publish to GitHub Packages registry
+              if: hashFiles('version.txt') != '' # Only runs if a version was actually created
+              run: |
+                  # 1. Point npm to GitHub Registry          
+                  npm config set registry https://npm.pkg.github.com/
+
+                  # 2. Set the auth token for GitHub
+                  echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > ~/.npmrc
+
+                  # 3. Publish (using --access public if your repo is public)
+                  npm publish --access public
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
             - name: Upload version.txt artifact
               uses: actions/upload-artifact@v4
