@@ -3,7 +3,7 @@
   "version": "1.0.0-rc.3",
   "description": "Simple CLI example published with semantic-release",
   "bin": {
-    "my-first-npm-package": "./bin/index.js"
+    "my-first-npm-package": "bin/index.js"
   },
   "files": [
     "bin"
