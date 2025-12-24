@@ -91,13 +91,13 @@ jobs:
               if: hashFiles('version.txt') != '' # Only runs if a version was actually created
               run: |
                   # 1. Point npm to GitHub Registry          
-                  npm config set registry https://npm.pkg.github.com/
+                  echo "@armandwipangestu:registry=https://npm.pkg.github.com/" > .npmrc
 
                   # 2. Set the auth token for GitHub
-                  echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > ~/.npmrc
+                  echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> .npmrc
 
                   # 3. Publish (using --access public if your repo is public)
-                  npm publish --access public --tag ${{ github.ref_name == 'main' && 'latest' || github.ref_name }}
+                  npm publish --access public --tag ${{ github.ref_name == 'main' && 'latest' || github.ref_name }} --registry=https://npm.pkg.github.com/
               env:
                   NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
