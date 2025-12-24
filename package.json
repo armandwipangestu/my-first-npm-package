@@ -1,0 +1,31 @@
+{
+  "name": "@armandwipangestu/my-first-npm-package",
+  "version": "1.0.0",
+  "description": "Simple CLI example published with semantic-release",
+  "bin": {
+    "my-first-npm-package": "./bin/index.js"
+  },
+  "files": [
+    "bin"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "echo \"Error: no lint specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/armandwipangestu/my-first-npm-package.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/armandwipangestu/my-first-npm-package/issues"
+  },
+  "homepage": "https://github.com/armandwipangestu/my-first-npm-package#readme"
+}
