@@ -1,3 +1,10 @@
+# [1.0.0-rc.6](https://github.com/armandwipangestu/my-first-npm-package/compare/v1.0.0-rc.5...v1.0.0-rc.6) (2025-12-24)
+
+
+### Bug Fixes
+
+* **ci:** add tag to tell which prerelease and latest version ([c1e23ae](https://github.com/armandwipangestu/my-first-npm-package/commit/c1e23ae0ec97b89f7757bb70a99db356799aafd3))
+
 # [1.0.0-rc.5](https://github.com/armandwipangestu/my-first-npm-package/compare/v1.0.0-rc.4...v1.0.0-rc.5) (2025-12-24)
 
 
