@@ -1,3 +1,9 @@
+## [1.3.0-rc.4](https://github.com/armandwipangestu/my-first-npm-package/compare/v1.3.0-rc.3...v1.3.0-rc.4) (2025-12-24)
+
+### Features
+
+* add picocolors ([45d88a0](https://github.com/armandwipangestu/my-first-npm-package/commit/45d88a0aab810404bae83e79124aa114bce3845a))
+
 ## [1.3.0-rc.3](https://github.com/armandwipangestu/my-first-npm-package/compare/v1.3.0-rc.2...v1.3.0-rc.3) (2025-12-24)
 
 ### Features
