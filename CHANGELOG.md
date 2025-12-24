@@ -1,3 +1,10 @@
+# [1.0.0-rc.5](https://github.com/armandwipangestu/my-first-npm-package/compare/v1.0.0-rc.4...v1.0.0-rc.5) (2025-12-24)
+
+
+### Features
+
+* add publish to github packages registry insted one of npmjs ([70e280a](https://github.com/armandwipangestu/my-first-npm-package/commit/70e280a37588487b240418940ffc65f63e7f721d))
+
 # [1.0.0-rc.4](https://github.com/armandwipangestu/my-first-npm-package/compare/v1.0.0-rc.3...v1.0.0-rc.4) (2025-12-24)
 
 
