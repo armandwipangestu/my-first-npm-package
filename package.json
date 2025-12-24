@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "description": "Simple CLI example published with semantic-release",
   "bin": {
-    "my-first-npm-package": "bin/index.js"
+    "my-first-npm-package": "bin/index.cjs"
   },
   "files": [
     "bin"
   ],
-  "main": "index.js",
+  "main": "index.cjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "echo \"Error: no lint specified\" && exit 1"
