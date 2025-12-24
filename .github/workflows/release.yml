@@ -7,7 +7,8 @@ on:
             - main
 
 env:
-    IMAGE_NAME: ghcr.io/armandwipangestu/my-first-npm-package
+    GHCR_IMAGE: ghcr.io/armandwipangestu/my-first-npm-package
+    DOCKERHUB_IMAGE: devvnull/my-first-npm-package
 
 jobs:
     # ------------------------------------------------------
@@ -33,14 +34,21 @@ jobs:
             - name: Log in to GitHub Container Registry
               run: echo "${{ secrets.GH_TOKEN }}" | docker login ghcr.io -u "${{ secrets.GH_USERNAME }}" --password-stdin
 
+            - name: Log in to Docker Hub
+              run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
+
             - name: Build Docker Image with SHA tag
               run: |
                   docker build \
+                    --platform linux/amd64 \
                     -f Dockerfile \
-                    -t $IMAGE_NAME:${{ env.SHORT_SHA }} .
+                    -t $GHCR_IMAGE:${{ env.SHORT_SHA }} \
+                    -t $DOCKERHUB_IMAGE:${{ env.SHORT_SHA }} .
 
             - name: Push Docker Image (SHA tag)
-              run: docker push $IMAGE_NAME:${{ env.SHORT_SHA }}
+              run: |
+                  docker push $GHCR_IMAGE:${{ env.SHORT_SHA }}
+                  docker push $DOCKERHUB_IMAGE:${{ env.SHORT_SHA }}
 
             - name: Save SHA to file
               run: echo "${SHORT_SHA}" > sha.txt
@@ -158,15 +166,28 @@ jobs:
               if: steps.check-version.outputs.RELEASE_EXISTS == 'true'
               run: echo "${{ secrets.GH_TOKEN }}" | docker login ghcr.io -u "${{ secrets.GH_USERNAME }}" --password-stdin
 
+            - name: Log in to Docker Hub
+              if: steps.check-version.outputs.RELEASE_EXISTS == 'true'
+              run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
+
             - name: Retag and Push
               if: steps.check-version.outputs.RELEASE_EXISTS == 'true'
               run: |
-                  docker pull $IMAGE_NAME:${{ env.SHORT_SHA }}
-                  docker tag $IMAGE_NAME:${{ env.SHORT_SHA }} $IMAGE_NAME:${{ env.VERSION }}
-                  docker push $IMAGE_NAME:${{ env.VERSION }}
+                  # Pull from GHCR (using the SHA pushed in Job 1)
+                  docker pull --platform linux/amd64 $GHCR_IMAGE:${{ env.SHORT_SHA }}
+
+                  # Retag and Push to GHCR
+                  docker tag $GHCR_IMAGE:${{ env.SHORT_SHA }} $GHCR_IMAGE:${{ env.VERSION }}
+                  docker push $GHCR_IMAGE:${{ env.VERSION }}
+
+                  # Retag and Push to Docker Hub
+                  docker tag $GHCR_IMAGE:${{ env.SHORT_SHA }} $DOCKERHUB_IMAGE:${{ env.VERSION }}
+                  docker push $DOCKERHUB_IMAGE:${{ env.VERSION }}
 
             - name: Retag latest (only on main)
               if: steps.check-version.outputs.RELEASE_EXISTS == 'true' && github.ref_name == 'main'
               run: |
-                  docker tag $IMAGE_NAME:${{ env.VERSION }} $IMAGE_NAME:latest
-                  docker push $IMAGE_NAME:latest
+                  docker tag $GHCR_IMAGE:${{ env.VERSION }} $GHCR_IMAGE:latest
+                  docker tag $GHCR_IMAGE:${{ env.VERSION }} $DOCKERHUB_IMAGE:latest
+                  docker push $GHCR_IMAGE:latest
+                  docker push $DOCKERHUB_IMAGE:latest
