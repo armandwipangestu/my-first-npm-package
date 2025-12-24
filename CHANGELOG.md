@@ -1,3 +1,13 @@
+## [1.3.0-rc.3](https://github.com/armandwipangestu/my-first-npm-package/compare/v1.3.0-rc.2...v1.3.0-rc.3) (2025-12-24)
+
+### Features
+
+* update script to use command for handle argv ([0fef344](https://github.com/armandwipangestu/my-first-npm-package/commit/0fef344f7c17ade6f55fb03674725823aadf2139))
+
+### Bug Fixes
+
+* change file ext to cjs ([497cfe2](https://github.com/armandwipangestu/my-first-npm-package/commit/497cfe27fab22faecb8f9a4f6f7a4abe50a4ca3f))
+
 ## [1.3.0-rc.2](https://github.com/armandwipangestu/my-first-npm-package/compare/v1.3.0-rc.1...v1.3.0-rc.2) (2025-12-24)
 
 ### Features
