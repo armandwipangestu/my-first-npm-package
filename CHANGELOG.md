@@ -1,3 +1,9 @@
+## [1.3.0-rc.2](https://github.com/armandwipangestu/my-first-npm-package/compare/v1.3.0-rc.1...v1.3.0-rc.2) (2025-12-24)
+
+### Features
+
+* change to cjs format for binary file ([1f0f656](https://github.com/armandwipangestu/my-first-npm-package/commit/1f0f656c93ddc037e8bad2fa49302517747867f5))
+
 ## [1.3.0-rc.1](https://github.com/armandwipangestu/my-first-npm-package/compare/v1.2.0...v1.3.0-rc.1) (2025-12-24)
 
 ### Features
