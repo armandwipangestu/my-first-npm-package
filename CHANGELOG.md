@@ -1,3 +1,10 @@
+# [1.0.0-rc.4](https://github.com/armandwipangestu/my-first-npm-package/compare/v1.0.0-rc.3...v1.0.0-rc.4) (2025-12-24)
+
+
+### Bug Fixes
+
+* remove `./` char in package.json ([2d09045](https://github.com/armandwipangestu/my-first-npm-package/commit/2d09045cd5b6f289bb82d603c830d45099212093))
+
 # [1.0.0-rc.3](https://github.com/armandwipangestu/my-first-npm-package/compare/v1.0.0-rc.2...v1.0.0-rc.3) (2025-12-24)
 
 
