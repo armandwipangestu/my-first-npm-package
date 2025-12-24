@@ -1,3 +1,10 @@
+# [1.2.0-rc.2](https://github.com/armandwipangestu/my-first-npm-package/compare/v1.2.0-rc.1...v1.2.0-rc.2) (2025-12-24)
+
+
+### Bug Fixes
+
+* **ci:** change username in DOCKERHUB_IMAGE ([81e46ce](https://github.com/armandwipangestu/my-first-npm-package/commit/81e46ceff5cea87c132d36fb1b057488daa0b52b))
+
 # [1.2.0-rc.1](https://github.com/armandwipangestu/my-first-npm-package/compare/v1.1.1-rc.1...v1.2.0-rc.1) (2025-12-24)
 
 
