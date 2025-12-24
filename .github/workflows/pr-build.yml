@@ -1,0 +1,138 @@
+name: PR Build & Test
+
+on:
+  pull_request:
+    branches:
+      - staging
+      - main
+    types:
+      - opened
+      - synchronize
+      - reopened
+
+jobs:
+  build-and-test:
+    name: Build and Test
+    runs-on: ubuntu-latest
+    environment: ${{ github.base_ref }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "25"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      # - name: Run lint
+      #   run: npm run lint
+
+      # - name: Run tests
+      #   run: npm test
+
+      - name: Validate Semantic Release (Dry Run)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npx semantic-release --dry-run --branches ${{ github.head_ref }}
+
+# ============= USING PNPM =============
+# name: PR Build & Test (pnpm)
+
+# on:
+#   pull_request:
+#     branches: [staging, main]
+
+# jobs:
+#   build-and-test:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v4
+#         with:
+#           fetch-depth: 0
+
+#       - name: Install pnpm
+#         uses: pnpm/action-setup@v4
+#         with:
+#           version: 9 # or latest
+
+#       - name: Setup Node.js
+#         uses: actions/setup-node@v4
+#         with:
+#           node-version: "25"
+#           cache: "pnpm"
+
+#       - name: Install dependencies
+#         run: pnpm install --frozen-lockfile
+
+#       - name: Validate Semantic Release (Dry Run)
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+#         run: pnpm exec semantic-release --dry-run --branches ${{ github.head_ref }}
+
+# ============= USING Bun =============
+# name: PR Build & Test (Bun)
+
+# on:
+#   pull_request:
+#     branches: [staging, main]
+
+# jobs:
+#   build-and-test:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v4
+#         with:
+#           fetch-depth: 0
+
+#       - name: Setup Bun
+#         uses: oven-sh/setup-bun@v2
+#         with:
+#           bun-version: latest
+
+#       - name: Install dependencies
+#         run: bun install --frozen-lockfile
+
+#       - name: Validate Semantic Release (Dry Run)
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+#         run: bunx semantic-release --dry-run --branches ${{ github.head_ref }}
+
+# ============= USING yarn =============
+# name: PR Build & Test (Yarn)
+
+# on:
+#   pull_request:
+#     branches: [staging, main]
+
+# jobs:
+#   build-and-test:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v4
+#         with:
+#           fetch-depth: 0
+
+#       - name: Setup Node.js
+#         uses: actions/setup-node@v4
+#         with:
+#           node-version: "25"
+#           cache: "yarn"
+
+#       - name: Install dependencies
+#         run: yarn install --immutable
+
+#       - name: Validate Semantic Release (Dry Run)
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+#         run: yarn dlx semantic-release --dry-run --branches ${{ github.head_ref }}

@@ -1,14 +1,30 @@
-# [1.2.0](https://github.com/armandwipangestu/my-first-npm-package/compare/v1.1.1...v1.2.0) (2025-12-24)
-
-
-### Bug Fixes
-
-* **ci:** change username in DOCKERHUB_IMAGE ([81e46ce](https://github.com/armandwipangestu/my-first-npm-package/commit/81e46ceff5cea87c132d36fb1b057488daa0b52b))
-
+## [1.3.0-rc.1](https://github.com/armandwipangestu/my-first-npm-package/compare/v1.2.0...v1.3.0-rc.1) (2025-12-24)
 
 ### Features
 
-* **ci:** docker hub as container registry ([5a1da05](https://github.com/armandwipangestu/my-first-npm-package/commit/5a1da057a3a4a337211357b3b0f828a7e220e73f))
+* change releaserc configuration from yml to cjs format ([8cb56f6](https://github.com/armandwipangestu/my-first-npm-package/commit/8cb56f671a2eae671679fd7ff4df5da169c82c5a))
+* **ci:** add pr-build checking pipeline ([78dd7a2](https://github.com/armandwipangestu/my-first-npm-package/commit/78dd7a2383018be4b78ba518c4815170b17ffe59))
+
+### Bug Fixes
+
+* change docker hub image link ([7e1ac5e](https://github.com/armandwipangestu/my-first-npm-package/commit/7e1ac5ef73776eb7a7a5f41965ced4d4767a3719))
+* semantic-release back to yml configuration ([f415095](https://github.com/armandwipangestu/my-first-npm-package/commit/f415095564dcf0831a2342d7e32d0ddcd5ba1359))
+* semantic-release configuration try change to config.cjs format ([a82a322](https://github.com/armandwipangestu/my-first-npm-package/commit/a82a3225f1a7a2f700630ba837b566d3c6ac63eb))
+
+## [1.2.0-rc.4](https://github.com/armandwipangestu/my-first-npm-package/compare/v1.2.0-rc.3...v1.2.0-rc.4) (2025-12-24)
+
+### Features
+
+* change releaserc configuration from yml to cjs format ([8cb56f6](https://github.com/armandwipangestu/my-first-npm-package/commit/8cb56f671a2eae671679fd7ff4df5da169c82c5a))
+* **ci:** add pr-build checking pipeline ([78dd7a2](https://github.com/armandwipangestu/my-first-npm-package/commit/78dd7a2383018be4b78ba518c4815170b17ffe59))
+
+### Bug Fixes
+
+* change docker hub image link ([7e1ac5e](https://github.com/armandwipangestu/my-first-npm-package/commit/7e1ac5ef73776eb7a7a5f41965ced4d4767a3719))
+* semantic-release back to yml configuration ([f415095](https://github.com/armandwipangestu/my-first-npm-package/commit/f415095564dcf0831a2342d7e32d0ddcd5ba1359))
+* semantic-release configuration try change to config.cjs format ([a82a322](https://github.com/armandwipangestu/my-first-npm-package/commit/a82a3225f1a7a2f700630ba837b566d3c6ac63eb))
+
+# [1.2.0-rc.3](https://github.com/armandwipangestu/my-first-npm-package/compare/v1.2.0-rc.2...v1.2.0-rc.3) (2025-12-24)
 
 # [1.2.0-rc.2](https://github.com/armandwipangestu/my-first-npm-package/compare/v1.2.0-rc.1...v1.2.0-rc.2) (2025-12-24)
 
