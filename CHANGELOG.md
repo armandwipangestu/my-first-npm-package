@@ -1,3 +1,10 @@
+# [1.0.0-rc.7](https://github.com/armandwipangestu/my-first-npm-package/compare/v1.0.0-rc.6...v1.0.0-rc.7) (2025-12-24)
+
+
+### Bug Fixes
+
+* **ci:** add user to npmrc ([888cbd5](https://github.com/armandwipangestu/my-first-npm-package/commit/888cbd59ec8aa47ad8c26b8756cd56144b745143))
+
 # [1.0.0-rc.6](https://github.com/armandwipangestu/my-first-npm-package/compare/v1.0.0-rc.5...v1.0.0-rc.6) (2025-12-24)
 
 
