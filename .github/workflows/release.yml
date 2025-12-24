@@ -8,7 +8,7 @@ on:
 
 env:
     GHCR_IMAGE: ghcr.io/armandwipangestu/my-first-npm-package
-    DOCKERHUB_IMAGE: armandwipangestu/my-first-npm-package
+    DOCKERHUB_IMAGE: devvnull/my-first-npm-package
 
 jobs:
     # ------------------------------------------------------
