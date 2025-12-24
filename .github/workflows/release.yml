@@ -97,7 +97,7 @@ jobs:
                   echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > ~/.npmrc
 
                   # 3. Publish (using --access public if your repo is public)
-                  npm publish --access public
+                  npm publish --access public --tag ${{ github.ref_name == 'main' && 'latest' || github.ref_name }}
               env:
                   NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
