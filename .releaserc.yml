@@ -63,7 +63,11 @@ plugins:
     - successComment: |
         🎉 This PR is included in version **${nextRelease.version}** 🎉
 
-        🔗 **View Release:** [${nextRelease.gitTag}](https://github.com/armandwipangestu/velora/releases/tag/${nextRelease.gitTag})
+        🔗 **View Release:** 
+
+        - GitHub Release: [${nextRelease.gitTag}](https://github.com/armandwipangestu/my-first-npm-package/releases/tag/${nextRelease.gitTag})
+        - Container Image: [${nextRelease.version}](https://github.com/armandwipangestu/my-first-npm-package/pkgs/container/my-first-npm-package)
+        - npm Package: [${nextRelease.version}](https://www.npmjs.com/package/@armandwipangestu/my-first-npm-package/v/${nextRelease.version})
 
         🤖 *"Kill all humans"* - Your [semantic-release](https://github.com/semantic-release/semantic-release) bot 🚀
       failComment: |
