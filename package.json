@@ -40,6 +40,7 @@
     "semantic-release": "^25.0.2"
   },
   "dependencies": {
-    "commander": "^14.0.2"
+    "commander": "^14.0.2",
+    "picocolors": "^1.1.1"
   }
 }
