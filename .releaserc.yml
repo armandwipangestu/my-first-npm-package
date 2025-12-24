@@ -51,7 +51,7 @@ plugins:
 
   - - "@semantic-release/npm"
     - npmPublish: true
-    - tarballDir: dist
+      tarballDir: dist
 
   - - "@semantic-release/git"
     - assets:
