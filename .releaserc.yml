@@ -67,7 +67,7 @@ plugins:
 
         - GitHub Release: [${nextRelease.gitTag}](https://github.com/armandwipangestu/my-first-npm-package/releases/tag/${nextRelease.gitTag})
         - GitHub Container Registry: [${nextRelease.version}](https://github.com/armandwipangestu/my-first-npm-package/pkgs/container/my-first-npm-package)
-        - Docker Hub: [${nextRelease.version}](https://hub.docker.com/repository/docker/devvnull/my-first-npm-package/tags/${nextRelease.version})
+        - Docker Hub: [${nextRelease.version}](https://hub.docker.com/layers/devvnull/my-first-npm-package/${nextRelease.version})
         - GitHub npm Package: [${nextRelease.version}](https://github.com/armandwipangestu/my-first-npm-package/pkgs/npm/my-first-npm-package)
         - npm Package: [${nextRelease.version}](https://www.npmjs.com/package/@armandwipangestu/my-first-npm-package/v/${nextRelease.version})
 
