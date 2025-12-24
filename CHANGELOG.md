@@ -1,3 +1,10 @@
+# [1.0.0-rc.3](https://github.com/armandwipangestu/my-first-npm-package/compare/v1.0.0-rc.2...v1.0.0-rc.3) (2025-12-24)
+
+
+### Bug Fixes
+
+* **ci:** add permission id-token for OIDC and Granular Tokens ([5028ff3](https://github.com/armandwipangestu/my-first-npm-package/commit/5028ff32af33bc819fef442c25234d06ccafb0a7))
+
 # [1.0.0-rc.2](https://github.com/armandwipangestu/my-first-npm-package/compare/v1.0.0-rc.1...v1.0.0-rc.2) (2025-12-24)
 
 # 1.0.0-rc.1 (2025-12-24)
