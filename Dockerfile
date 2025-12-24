@@ -14,7 +14,7 @@ RUN npm install --omit=dev
 COPY . .
 
 # Make sure the binary is executable
-RUN chmod +x ./bin/index.js
+RUN chmod +x ./bin/index.cjs
 
 # Link the package so the 'bin' command is available globally in the container
 RUN npm link
