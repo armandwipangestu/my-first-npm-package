@@ -1,15 +1,24 @@
-## [1.3.0](https://github.com/armandwipangestu/my-first-npm-package/compare/v1.2.0...v1.3.0) (2025-12-24)
+## [1.3.0-rc.4](https://github.com/armandwipangestu/my-first-npm-package/compare/v1.3.0-rc.3...v1.3.0-rc.4) (2025-12-24)
 
 ### Features
 
-* change releaserc configuration from yml to cjs format ([8cb56f6](https://github.com/armandwipangestu/my-first-npm-package/commit/8cb56f671a2eae671679fd7ff4df5da169c82c5a))
-* **ci:** add pr-build checking pipeline ([78dd7a2](https://github.com/armandwipangestu/my-first-npm-package/commit/78dd7a2383018be4b78ba518c4815170b17ffe59))
+* add picocolors ([45d88a0](https://github.com/armandwipangestu/my-first-npm-package/commit/45d88a0aab810404bae83e79124aa114bce3845a))
+
+## [1.3.0-rc.3](https://github.com/armandwipangestu/my-first-npm-package/compare/v1.3.0-rc.2...v1.3.0-rc.3) (2025-12-24)
+
+### Features
+
+* update script to use command for handle argv ([0fef344](https://github.com/armandwipangestu/my-first-npm-package/commit/0fef344f7c17ade6f55fb03674725823aadf2139))
 
 ### Bug Fixes
 
-* change docker hub image link ([7e1ac5e](https://github.com/armandwipangestu/my-first-npm-package/commit/7e1ac5ef73776eb7a7a5f41965ced4d4767a3719))
-* semantic-release back to yml configuration ([f415095](https://github.com/armandwipangestu/my-first-npm-package/commit/f415095564dcf0831a2342d7e32d0ddcd5ba1359))
-* semantic-release configuration try change to config.cjs format ([a82a322](https://github.com/armandwipangestu/my-first-npm-package/commit/a82a3225f1a7a2f700630ba837b566d3c6ac63eb))
+* change file ext to cjs ([497cfe2](https://github.com/armandwipangestu/my-first-npm-package/commit/497cfe27fab22faecb8f9a4f6f7a4abe50a4ca3f))
+
+## [1.3.0-rc.2](https://github.com/armandwipangestu/my-first-npm-package/compare/v1.3.0-rc.1...v1.3.0-rc.2) (2025-12-24)
+
+### Features
+
+* change to cjs format for binary file ([1f0f656](https://github.com/armandwipangestu/my-first-npm-package/commit/1f0f656c93ddc037e8bad2fa49302517747867f5))
 
 ## [1.3.0-rc.1](https://github.com/armandwipangestu/my-first-npm-package/compare/v1.2.0...v1.3.0-rc.1) (2025-12-24)
 
