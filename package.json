@@ -1,6 +1,6 @@
 {
   "name": "@armandwipangestu/my-first-npm-package",
-  "version": "1.0.0-rc.7",
+  "version": "1.1.0-rc.1",
   "description": "Simple CLI example published with semantic-release",
   "bin": {
     "my-first-npm-package": "bin/index.js"
