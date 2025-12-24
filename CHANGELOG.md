@@ -1,3 +1,16 @@
+# [1.1.0](https://github.com/armandwipangestu/my-first-npm-package/compare/v1.0.0...v1.1.0) (2025-12-24)
+
+
+### Bug Fixes
+
+* **ci:** add tag to tell which prerelease and latest version ([c1e23ae](https://github.com/armandwipangestu/my-first-npm-package/commit/c1e23ae0ec97b89f7757bb70a99db356799aafd3))
+* **ci:** add user to npmrc ([888cbd5](https://github.com/armandwipangestu/my-first-npm-package/commit/888cbd59ec8aa47ad8c26b8756cd56144b745143))
+
+
+### Features
+
+* add publish to github packages registry insted one of npmjs ([70e280a](https://github.com/armandwipangestu/my-first-npm-package/commit/70e280a37588487b240418940ffc65f63e7f721d))
+
 # [1.1.0-rc.1](https://github.com/armandwipangestu/my-first-npm-package/compare/v1.0.0...v1.1.0-rc.1) (2025-12-24)
 
 
